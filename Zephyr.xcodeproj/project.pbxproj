@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		325BD16C29F0EEA700EF6D13 /* ZephyrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BD16B29F0EEA700EF6D13 /* ZephyrApp.swift */; };
+		325BD16E29F0EEA700EF6D13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BD16D29F0EEA700EF6D13 /* ContentView.swift */; };
+		325BD17029F0EEA800EF6D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325BD16F29F0EEA800EF6D13 /* Assets.xcassets */; };
+		325BD17329F0EEA800EF6D13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325BD17229F0EEA800EF6D13 /* Preview Assets.xcassets */; };
+		325BD17E29F0EEA800EF6D13 /* ZephyrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BD17D29F0EEA800EF6D13 /* ZephyrTests.swift */; };
+		325BD18829F0EEA800EF6D13 /* ZephyrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BD18729F0EEA800EF6D13 /* ZephyrUITests.swift */; };
+		325BD18A29F0EEA800EF6D13 /* ZephyrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BD18929F0EEA800EF6D13 /* ZephyrUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		325BD17A29F0EEA800EF6D13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 325BD16029F0EEA700EF6D13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325BD16729F0EEA700EF6D13;
+			remoteInfo = Zephyr;
+		};
+		325BD18429F0EEA800EF6D13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 325BD16029F0EEA700EF6D13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325BD16729F0EEA700EF6D13;
+			remoteInfo = Zephyr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		325BD16829F0EEA700EF6D13 /* Zephyr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zephyr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		325BD16B29F0EEA700EF6D13 /* ZephyrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZephyrApp.swift; sourceTree = "<group>"; };
+		325BD16D29F0EEA700EF6D13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		325BD16F29F0EEA800EF6D13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		325BD17229F0EEA800EF6D13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		325BD17429F0EEA800EF6D13 /* Zephyr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zephyr.entitlements; sourceTree = "<group>"; };
+		325BD17929F0EEA800EF6D13 /* ZephyrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZephyrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325BD17D29F0EEA800EF6D13 /* ZephyrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZephyrTests.swift; sourceTree = "<group>"; };
+		325BD18329F0EEA800EF6D13 /* ZephyrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZephyrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325BD18729F0EEA800EF6D13 /* ZephyrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZephyrUITests.swift; sourceTree = "<group>"; };
+		325BD18929F0EEA800EF6D13 /* ZephyrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZephyrUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		325BD16529F0EEA700EF6D13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325BD17629F0EEA800EF6D13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325BD18029F0EEA800EF6D13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		325BD15F29F0EEA700EF6D13 = {
+			isa = PBXGroup;
+			children = (
+				325BD16A29F0EEA700EF6D13 /* Zephyr */,
+				325BD17C29F0EEA800EF6D13 /* ZephyrTests */,
+				325BD18629F0EEA800EF6D13 /* ZephyrUITests */,
+				325BD16929F0EEA700EF6D13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		325BD16929F0EEA700EF6D13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				325BD16829F0EEA700EF6D13 /* Zephyr.app */,
+				325BD17929F0EEA800EF6D13 /* ZephyrTests.xctest */,
+				325BD18329F0EEA800EF6D13 /* ZephyrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		325BD16A29F0EEA700EF6D13 /* Zephyr */ = {
+			isa = PBXGroup;
+			children = (
+				325BD16B29F0EEA700EF6D13 /* ZephyrApp.swift */,
+				325BD16D29F0EEA700EF6D13 /* ContentView.swift */,
+				325BD16F29F0EEA800EF6D13 /* Assets.xcassets */,
+				325BD17429F0EEA800EF6D13 /* Zephyr.entitlements */,
+				325BD17129F0EEA800EF6D13 /* Preview Content */,
+			);
+			path = Zephyr;
+			sourceTree = "<group>";
+		};
+		325BD17129F0EEA800EF6D13 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				325BD17229F0EEA800EF6D13 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		325BD17C29F0EEA800EF6D13 /* ZephyrTests */ = {
+			isa = PBXGroup;
+			children = (
+				325BD17D29F0EEA800EF6D13 /* ZephyrTests.swift */,
+			);
+			path = ZephyrTests;
+			sourceTree = "<group>";
+		};
+		325BD18629F0EEA800EF6D13 /* ZephyrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				325BD18729F0EEA800EF6D13 /* ZephyrUITests.swift */,
+				325BD18929F0EEA800EF6D13 /* ZephyrUITestsLaunchTests.swift */,
+			);
+			path = ZephyrUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		325BD16729F0EEA700EF6D13 /* Zephyr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325BD18D29F0EEA800EF6D13 /* Build configuration list for PBXNativeTarget "Zephyr" */;
+			buildPhases = (
+				325BD16429F0EEA700EF6D13 /* Sources */,
+				325BD16529F0EEA700EF6D13 /* Frameworks */,
+				325BD16629F0EEA700EF6D13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zephyr;
+			productName = Zephyr;
+			productReference = 325BD16829F0EEA700EF6D13 /* Zephyr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		325BD17829F0EEA800EF6D13 /* ZephyrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325BD19029F0EEA800EF6D13 /* Build configuration list for PBXNativeTarget "ZephyrTests" */;
+			buildPhases = (
+				325BD17529F0EEA800EF6D13 /* Sources */,
+				325BD17629F0EEA800EF6D13 /* Frameworks */,
+				325BD17729F0EEA800EF6D13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325BD17B29F0EEA800EF6D13 /* PBXTargetDependency */,
+			);
+			name = ZephyrTests;
+			productName = ZephyrTests;
+			productReference = 325BD17929F0EEA800EF6D13 /* ZephyrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		325BD18229F0EEA800EF6D13 /* ZephyrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325BD19329F0EEA800EF6D13 /* Build configuration list for PBXNativeTarget "ZephyrUITests" */;
+			buildPhases = (
+				325BD17F29F0EEA800EF6D13 /* Sources */,
+				325BD18029F0EEA800EF6D13 /* Frameworks */,
+				325BD18129F0EEA800EF6D13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325BD18529F0EEA800EF6D13 /* PBXTargetDependency */,
+			);
+			name = ZephyrUITests;
+			productName = ZephyrUITests;
+			productReference = 325BD18329F0EEA800EF6D13 /* ZephyrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		325BD16029F0EEA700EF6D13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					325BD16729F0EEA700EF6D13 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					325BD17829F0EEA800EF6D13 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 325BD16729F0EEA700EF6D13;
+					};
+					325BD18229F0EEA800EF6D13 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 325BD16729F0EEA700EF6D13;
+					};
+				};
+			};
+			buildConfigurationList = 325BD16329F0EEA700EF6D13 /* Build configuration list for PBXProject "Zephyr" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 325BD15F29F0EEA700EF6D13;
+			productRefGroup = 325BD16929F0EEA700EF6D13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				325BD16729F0EEA700EF6D13 /* Zephyr */,
+				325BD17829F0EEA800EF6D13 /* ZephyrTests */,
+				325BD18229F0EEA800EF6D13 /* ZephyrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		325BD16629F0EEA700EF6D13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325BD17329F0EEA800EF6D13 /* Preview Assets.xcassets in Resources */,
+				325BD17029F0EEA800EF6D13 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325BD17729F0EEA800EF6D13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325BD18129F0EEA800EF6D13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		325BD16429F0EEA700EF6D13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325BD16E29F0EEA700EF6D13 /* ContentView.swift in Sources */,
+				325BD16C29F0EEA700EF6D13 /* ZephyrApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325BD17529F0EEA800EF6D13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325BD17E29F0EEA800EF6D13 /* ZephyrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325BD17F29F0EEA800EF6D13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325BD18A29F0EEA800EF6D13 /* ZephyrUITestsLaunchTests.swift in Sources */,
+				325BD18829F0EEA800EF6D13 /* ZephyrUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		325BD17B29F0EEA800EF6D13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325BD16729F0EEA700EF6D13 /* Zephyr */;
+			targetProxy = 325BD17A29F0EEA800EF6D13 /* PBXContainerItemProxy */;
+		};
+		325BD18529F0EEA800EF6D13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325BD16729F0EEA700EF6D13 /* Zephyr */;
+			targetProxy = 325BD18429F0EEA800EF6D13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		325BD18B29F0EEA800EF6D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		325BD18C29F0EEA800EF6D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		325BD18E29F0EEA800EF6D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Zephyr/Zephyr.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Zephyr/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.rajan.Zephyr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		325BD18F29F0EEA800EF6D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Zephyr/Zephyr.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Zephyr/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.rajan.Zephyr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		325BD19129F0EEA800EF6D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.rajan.ZephyrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zephyr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Zephyr";
+			};
+			name = Debug;
+		};
+		325BD19229F0EEA800EF6D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.rajan.ZephyrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zephyr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Zephyr";
+			};
+			name = Release;
+		};
+		325BD19429F0EEA800EF6D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.rajan.ZephyrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Zephyr;
+			};
+			name = Debug;
+		};
+		325BD19529F0EEA800EF6D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.rajan.ZephyrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Zephyr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		325BD16329F0EEA700EF6D13 /* Build configuration list for PBXProject "Zephyr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325BD18B29F0EEA800EF6D13 /* Debug */,
+				325BD18C29F0EEA800EF6D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325BD18D29F0EEA800EF6D13 /* Build configuration list for PBXNativeTarget "Zephyr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325BD18E29F0EEA800EF6D13 /* Debug */,
+				325BD18F29F0EEA800EF6D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325BD19029F0EEA800EF6D13 /* Build configuration list for PBXNativeTarget "ZephyrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325BD19129F0EEA800EF6D13 /* Debug */,
+				325BD19229F0EEA800EF6D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325BD19329F0EEA800EF6D13 /* Build configuration list for PBXNativeTarget "ZephyrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325BD19429F0EEA800EF6D13 /* Debug */,
+				325BD19529F0EEA800EF6D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 325BD16029F0EEA700EF6D13 /* Project object */;
+}
