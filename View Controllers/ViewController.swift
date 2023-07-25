@@ -343,6 +343,8 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
         ac.addAction(UIAlertAction(title: "Send", style: .default, handler: { [weak self, weak ac] _ in
             guard let message = ac?.textFields?[0].text else { return }
             self?.sendMessageToOthers(message)
+            self?.messageString += [message]
+            self!.updateLabelWithMessageString()
         }))
         
         present(ac, animated: true)
