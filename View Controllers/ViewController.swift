@@ -8,7 +8,7 @@ private let reuseIdentifier = "ImageCell"
 
 class ViewController: UICollectionViewController, MCBrowserViewControllerDelegate, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate {
     
-    var intro: [String] = ["Offline? ➡️", "Good. ➡️", ""]
+    var intro: [String] = [""]
     var currentIndex = 2
     var images = [UIImage]()
     let imageViewTag = 1000
@@ -71,59 +71,66 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
         
         navigationItem.setHidesBackButton(true, animated: false)
         navigationItem.title = ""
-        navigationItem.rightBarButtonItems?.forEach { $0.isEnabled = false }
-        navigationItem.leftBarButtonItems?.forEach { $0.isEnabled = false }
+        navigationItem.rightBarButtonItems?.forEach { $0.isEnabled = true }
+        navigationItem.leftBarButtonItems?.forEach { $0.isEnabled = true }
         
         mcSession = MCSession(peer: mcPeerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession?.delegate = self
+        updateLabelWithMessageString(type: "message")
     }
     
-    func updateLabelWithMessageString() {
-        var yPosition: CGFloat = 150
+    func updateLabelWithMessageString(type: String) {
+        let spacingBetweenMessages: CGFloat = 40
+        let spacingBetweenImagesAndMessages: CGFloat = 120
+        var lastMessageYPosition: CGFloat = 150
+        var lastImageYPosition: CGFloat = 150 // Initial yPosition for images
         
-        for (i, message) in messageString.enumerated() {
-            let label = UILabel(frame: CGRect(x: 15, y: yPosition, width: view.bounds.width - 30, height: 30))
-            label.text = personString[i] + message
-            label.textAlignment = .left
-            view.addSubview(label)
+        switch type {
+        case "message":
+            for i in 0..<messageString.count {
+                let label = UILabel(frame: CGRect(x: 15, y: lastMessageYPosition, width: view.bounds.width - 30, height: 30))
+                label.text = personString[i] + messageString[i]
+                label.textAlignment = .left
+                label.numberOfLines = 0 // Allow multiline text
+                label.sizeToFit() // Adjust the label's frame size to fit the text
+                view.addSubview(label)
+                lastMessageYPosition += spacingBetweenMessages + label.frame.size.height
+                lastImageYPosition += spacingBetweenMessages + label.frame.size.height
+            }
+        case "image":
+            // Start adding images from the last message's yPosition or initial yPosition if there were no messages
+            var yPosition: CGFloat = max(lastMessageYPosition, lastImageYPosition)
             
-            // Update the vertical position for the next chat message
-            yPosition += 40 // You can adjust this value to set the spacing between chat messages
-            
-            // Check if there's an image available for the current message
-            if i < images.count {
+            for i in 0..<images.count {
                 let imageView = UIImageView(frame: CGRect(x: 15, y: yPosition, width: 100, height: 100))
                 imageView.image = images[i] // Assuming "images" is an array of UIImage objects
                 view.addSubview(imageView)
-                
-                // Update the vertical position for the next image
-                yPosition += 120 // You can adjust this value to set the spacing between images and chat messages
+                yPosition += spacingBetweenImagesAndMessages + imageView.frame.size.height
             }
+        default:
+            break
         }
     }
     
-    
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let maxIndex = 3
+        let maxIndex = 1
         let newIndex = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+        updateLabelWithMessageString(type: "message")
         
         if newIndex != currentMessageIndex {
             currentMessageIndex = newIndex
             showCurrentMessage()
         }
         
-        if currentMessageIndex == intro.count - 1 {
-            navigationItem.setHidesBackButton(false, animated: true)
-            navigationItem.rightBarButtonItems?.forEach { $0.isEnabled = true }
-            navigationItem.leftBarButtonItems?.forEach { $0.isEnabled = true }
-            intro[0] = ""
-            intro[1] = ""
-            updateLabelWithMessageString()
-            shouldHide = false
-        }
+        navigationItem.setHidesBackButton(false, animated: true)
+        navigationItem.rightBarButtonItems?.forEach { $0.isEnabled = true }
+        navigationItem.leftBarButtonItems?.forEach { $0.isEnabled = true }
+        intro[0] = ""
+        intro[1] = ""
+        shouldHide = false
         
         if currentMessageIndex >= intro.count - maxIndex {
-            shouldHide = true
+            shouldHide = false
         } else {
             shouldHide = false
         }
@@ -231,13 +238,14 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         DispatchQueue.main.async { [weak self] in
             if let image = UIImage(data: data) {
-                self?.images.insert(image, at: 0)
+                self?.images += [image]
+                self!.updateLabelWithMessageString(type: "image")
                 // self?.collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
             } else if let message = String(data: data, encoding: .utf8) {
                 self?.messageString += [message]
                 self?.personString += [peerID.displayName + ": "]
+                self!.updateLabelWithMessageString(type: "message")
             }
-            self!.updateLabelWithMessageString()
         }
     }
     
@@ -273,7 +281,7 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
         }
         
         sendDataToPeers(data: pngImage)
-        self.updateLabelWithMessageString()
+        self.updateLabelWithMessageString(type: "image")
     }
     
     @objc func handleProfilePromptPressed() {
@@ -364,7 +372,7 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
             self?.sendMessageToOthers(message)
             self?.messageString += [message]
             self?.personString += [UIDevice.current.name + ": "]
-            self!.updateLabelWithMessageString()
+            self!.updateLabelWithMessageString(type: "message")
         }))
         
         present(ac, animated: true)
@@ -372,7 +380,7 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
     
     private func sendMessageToOthers(_ message: String) {
         sendDataToPeers(data: Data(message.utf8))
-        self.updateLabelWithMessageString()
+        self.updateLabelWithMessageString(type: "message")
     }
     
     
