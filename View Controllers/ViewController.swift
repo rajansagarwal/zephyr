@@ -82,30 +82,23 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
     func updateLabelWithMessageString(type: String) {
         let spacingBetweenMessages: CGFloat = 40
         let spacingBetweenImagesAndMessages: CGFloat = 120
-        var lastMessageYPosition: CGFloat = 150
-        var lastImageYPosition: CGFloat = 150 // Initial yPosition for images
+        var yPosition: CGFloat = 150
         
         switch type {
         case "message":
             for i in 0..<messageString.count {
-                let label = UILabel(frame: CGRect(x: 15, y: lastMessageYPosition, width: view.bounds.width - 30, height: 30))
+                let label = UILabel(frame: CGRect(x: 15, y: yPosition, width: view.bounds.width - 30, height: 30))
                 label.text = personString[i] + messageString[i]
                 label.textAlignment = .left
-                label.numberOfLines = 0 // Allow multiline text
-                label.sizeToFit() // Adjust the label's frame size to fit the text
                 view.addSubview(label)
-                lastMessageYPosition += spacingBetweenMessages + label.frame.size.height
-                lastImageYPosition += spacingBetweenMessages + label.frame.size.height
+                yPosition += spacingBetweenMessages
             }
         case "image":
-            // Start adding images from the last message's yPosition or initial yPosition if there were no messages
-            var yPosition: CGFloat = max(lastMessageYPosition, lastImageYPosition)
-            
             for i in 0..<images.count {
-                let imageView = UIImageView(frame: CGRect(x: 15, y: yPosition, width: 100, height: 100))
-                imageView.image = images[i] // Assuming "images" is an array of UIImage objects
+                let imageView = UIImageView(frame: CGRect(x: view.bounds.width - 120, y: yPosition, width: 100, height: 100))
+                imageView.image = images[i]
                 view.addSubview(imageView)
-                yPosition += spacingBetweenImagesAndMessages + imageView.frame.size.height
+                yPosition += spacingBetweenImagesAndMessages
             }
         default:
             break
