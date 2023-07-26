@@ -17,6 +17,7 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
     var newNote: String?
     var shouldHide = false
     var messageString = ["Message"]
+    var personString = [""]
     
     private let mcServiceType = "zephyr"
     private var mcPeerID = MCPeerID(displayName: UIDevice.current.name)
@@ -78,11 +79,29 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
     }
     
     func updateLabelWithMessageString() {
-        let topLeftLabel = UILabel(frame: CGRect(x: 15, y: 150, width: view.bounds.width - 30, height: 30))
-        topLeftLabel.text = messageString.joined(separator: ",")
-        topLeftLabel.textAlignment = .left
-        view.addSubview(topLeftLabel)
+        var yPosition: CGFloat = 150
+        
+        for (i, message) in messageString.enumerated() {
+            let label = UILabel(frame: CGRect(x: 15, y: yPosition, width: view.bounds.width - 30, height: 30))
+            label.text = personString[i] + message
+            label.textAlignment = .left
+            view.addSubview(label)
+            
+            // Update the vertical position for the next chat message
+            yPosition += 40 // You can adjust this value to set the spacing between chat messages
+            
+            // Check if there's an image available for the current message
+            if i < images.count {
+                let imageView = UIImageView(frame: CGRect(x: 15, y: yPosition, width: 100, height: 100))
+                imageView.image = images[i] // Assuming "images" is an array of UIImage objects
+                view.addSubview(imageView)
+                
+                // Update the vertical position for the next image
+                yPosition += 120 // You can adjust this value to set the spacing between images and chat messages
+            }
+        }
     }
+    
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let maxIndex = 3
@@ -213,11 +232,12 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
         DispatchQueue.main.async { [weak self] in
             if let image = UIImage(data: data) {
                 self?.images.insert(image, at: 0)
-                self?.collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
+                // self?.collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
             } else if let message = String(data: data, encoding: .utf8) {
                 self?.messageString += [message]
-                self!.updateLabelWithMessageString()
+                self?.personString += [peerID.displayName + ": "]
             }
+            self!.updateLabelWithMessageString()
         }
     }
     
@@ -253,6 +273,7 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
         }
         
         sendDataToPeers(data: pngImage)
+        self.updateLabelWithMessageString()
     }
     
     @objc func handleProfilePromptPressed() {
@@ -295,8 +316,6 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
         let contactData = try! CNContactVCardSerialization.data(
             with: [userContact])
     }
-    
-    
     
     @objc private func handleShowConnectionPromtButtonTapped() {
         guard let mcSession = mcSession else {
@@ -344,6 +363,7 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
             guard let message = ac?.textFields?[0].text else { return }
             self?.sendMessageToOthers(message)
             self?.messageString += [message]
+            self?.personString += [UIDevice.current.name + ": "]
             self!.updateLabelWithMessageString()
         }))
         
@@ -352,6 +372,7 @@ class ViewController: UICollectionViewController, MCBrowserViewControllerDelegat
     
     private func sendMessageToOthers(_ message: String) {
         sendDataToPeers(data: Data(message.utf8))
+        self.updateLabelWithMessageString()
     }
     
     
@@ -413,7 +434,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         dismiss(animated: true)
         
         images.insert(editingImage, at: 0)
-        collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
+        // collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
         
         sendImageToPeers(editingImage)
     }
@@ -426,6 +447,5 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         imagePicker.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         
         present(imagePicker, animated: true)
-        
     }
 }
